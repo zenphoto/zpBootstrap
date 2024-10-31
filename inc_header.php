@@ -120,7 +120,7 @@ if (!defined('WEBPATH')) die();
 	</script>
 	<?php } ?>
 
-	<?php if (($_zp_gallery_page == 'image.php') || ($_zenpage_news_enabled && is_NewsArticle())) { ?>
+	<?php if ($_zp_gallery_page == 'image.php' || ($_zp_gallery_page == 'news.php' && $_zenpage_news_enabled && is_NewsArticle())) { ?>
 	<script type="text/javascript">
 	//<![CDATA[
 		<?php
