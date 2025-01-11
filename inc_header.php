@@ -266,7 +266,7 @@ if (!defined('WEBPATH')) die();
 						<?php } ?>
 						<?php if ((!zp_loggedin()) && (extensionEnabled('register_user'))) { ?>
 							<li>
-								<?php printRegisterURL(gettext('Register')); ?>
+								<?php registerUser::printLink(gettext('Register')); ?>
 							</li>
 						<?php } ?>
 						</ul>
