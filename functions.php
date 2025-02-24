@@ -76,10 +76,11 @@ function my_checkPageValidity($request, $gallery_page, $page) {
  * @param string $album_filename full filename of album to use
  * @return an array of pictures, or false is there is no picture to return
  */
-function zpB_getRandomImages ($number = 5, $option = 'all', $album_filename = '') {
-	global $_zp_gallery;
-	
-	switch ($option) {
+function zpB_getRandomImages($number = 5, $option = 'all', $album_filename = '') {
+	if (function_exists('getImageStatistic')) {
+		global $_zp_gallery;
+
+		switch ($option) {
 			case "all" :
 				$number_max = $_zp_gallery->getNumImages(2);
 				break;
@@ -89,29 +90,31 @@ function zpB_getRandomImages ($number = 5, $option = 'all', $album_filename = ''
 					$number_max = $album->getNumImages();
 				}
 				break;
-	}
-
-	$number = min($number, $number_max);
-	$randomImageList = array();
-
-	switch ($option) {
-		case "all" :
-			$randomImages = getImageStatistic($number, 'random', '');
-			break;
-		case "album" :
-			$randomImages = getImageStatistic($number, 'random', $album_filename);
-			break;
-	}
-	if ( isset($randomImages) ) {
-		foreach($randomImages as $randomImage) {
-			$randomImageList[] = $randomImage;
 		}
-	} 
-	if (!empty($randomImageList)) {
-		return $randomImageList;
-	} else {
-		return false;
+
+		$number = min($number, $number_max);
+		$randomImageList = array();
+
+		switch ($option) {
+			case "all" :
+				$randomImages = getImageStatistic($number, 'random', '');
+				break;
+			case "album" :
+				$randomImages = getImageStatistic($number, 'random', $album_filename);
+				break;
+		}
+		if (isset($randomImages)) {
+			foreach ($randomImages as $randomImage) {
+				$randomImageList[] = $randomImage;
+			}
+		}
+		if (!empty($randomImageList)) {
+			return $randomImageList;
+		} else {
+			return false;
+		}
 	}
+	return false;
 }
 
 /**
