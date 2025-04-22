@@ -48,6 +48,7 @@ class ThemeOptions {
 			cacheManager::addDefaultSizedImageSize();
 			$img_wmk = getOption('fullimage_watermark') ? getOption('fullimage_watermark') : null;
 			$thumb_wmk = getOption('Image_watermark') ? getOption('Image_watermark') : null;
+			$img_effect = getOption('image_gray') ? 'gray' : null;
 			cacheManager::addCacheSize($me, NULL, getOption('zpB_album_thumb_width'), getOption('zpB_album_thumb_height'), getOption('zpB_album_thumb_width'), getOption('zpB_album_thumb_height'), NULL, NULL, NULL, $thumb_wmk, $img_effect, false);
 			cacheManager::addCacheSize($me, NULL, 1000, 500, 1000, 500, NULL, NULL, NULL, $img_wmk, $img_effect, false);
 		}
