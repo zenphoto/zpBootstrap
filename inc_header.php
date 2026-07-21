@@ -9,10 +9,10 @@ if (!defined('WEBPATH')) die();
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<?php
 	if ( !((($_zp_gallery_page == 'pages.php') && (getPageTitleLink() == 'map')) || ($_zp_gallery_page == 'album.php')) ) {
-		zp_remove_filter('theme_head', 'GoogleMap::js');
-		zp_remove_filter('theme_head', 'openStreetMap::scripts');
+		filter::removeFilter('theme_head', 'GoogleMap::js');
+		filter::removeFilter('theme_head', 'openStreetMap::scripts');
 	}
-	zp_apply_filter('theme_head');
+	filter::applyFilter('theme_head');
 	?>
 	<title>
 	<?php
@@ -108,7 +108,7 @@ if (!defined('WEBPATH')) die();
 					PREV		: '<?php echo gettext('prev'); ?>',
 					PLAY_START	: '<?php echo gettext('start slideshow'); ?>',
 					PLAY_STOP	: '<?php echo gettext('stop slideshow'); ?>',
-					THUMBS		: '<?php echo gettext_th('thumbnails'); ?>'
+					THUMBS		: '<?php echo i18n::gettext_th('thumbnails'); ?>'
 				}
 			};
 
@@ -171,7 +171,7 @@ if (!defined('WEBPATH')) die();
 
 <body>
 <?php
-	zp_apply_filter('theme_body_open');
+	filter::applyFilter('theme_body_open');
 
 	if ( ((!getOption('zpB_homepage')) && ($_zp_gallery_page == 'index.php')) ||
 			($_zp_gallery_page == 'gallery.php') ||

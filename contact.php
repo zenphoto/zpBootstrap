@@ -13,7 +13,7 @@ if (extensionEnabled('contact_form')) {
 		<div class="row">
 			<div class="col-sm-offset-1 col-sm-10">
 				<div class="post">
-					<?php printContactForm(); ?>
+					<?php contactForm::printContactForm(); ?>
 				</div>
 			</div>
 		</div>
