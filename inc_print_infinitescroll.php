@@ -2,13 +2,13 @@
 		if (isAlbumPage()) {
 			$containerClass = '.album-wrap';
 			$itemClass = '.album-thumb';
-			$viewMoreText = gettext_th('View more albums');
-			$noMoreText = gettext_th('No more albums to display');
+			$viewMoreText = i18n::gettext_th('View more albums');
+			$noMoreText = i18n::gettext_th('No more albums to display');
 		} else if (isImagePage()) {
 			$containerClass = '.image-wrap';
 			$itemClass = '.image-thumb';
-			$viewMoreText = gettext_th('View more images');
-			$noMoreText = gettext_th('No more images to display');
+			$viewMoreText = i18n::gettext_th('View more images');
+			$noMoreText = i18n::gettext_th('No more images to display');
 		}
 		?>
 

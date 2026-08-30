@@ -83,13 +83,13 @@ class ThemeOptions {
 				'order' => 0,
 				'key' => 'zpB_homepage',
 				'type' => OPTION_TYPE_CHECKBOX,
-				'desc' => gettext_th('Display a home page, with a slider of random pictures, the gallery description and the latest news.', $me)),
-			gettext_th('Latest news on Homepage', $me) => array(
+				'desc' => i18n::gettext_th('Display a home page, with a slider of random pictures, the gallery description and the latest news.', $me)),
+			i18n::gettext_th('Latest news on Homepage', $me) => array(
 				'order' => 1,
 				'key' => 'zpB_latest_news_homepage',
 				'type' => OPTION_TYPE_CHECKBOX,
-				'desc' => gettext_th('Display the latest news on the home page (Homepage option have to be selected too).', $me)),
-			gettext_th('Homepage slider', $me) => array(
+				'desc' => i18n::gettext_th('Display the latest news on the home page (Homepage option have to be selected too).', $me)),
+			i18n::gettext_th('Homepage slider', $me) => array(
 				'order' => 2,
 				'key' => 'zpB_homepage_album_filename',
 				'type' => OPTION_TYPE_SELECTOR,
@@ -97,15 +97,15 @@ class ThemeOptions {
 				'selections' => $albums,
 				'multilingual' => 0,
 				'desc' =>
-					gettext_th('Select the Album to use for the homepage slider (Dynamic albums may used).', $me) . '<br />' .
-					gettext_th('If Gallery is selected, the whole gallery will be used for the slider.', $me)),
-			gettext_th('Random pictures for homepage slider', $me) => array(
+					i18n::gettext_th('Select the Album to use for the homepage slider (Dynamic albums may used).', $me) . '<br />' .
+					i18n::gettext_th('If Gallery is selected, the whole gallery will be used for the slider.', $me)),
+			i18n::gettext_th('Random pictures for homepage slider', $me) => array(
 				'order' => 4,
 				'key' => 'zpB_homepage_random_pictures',
 				'type' => OPTION_TYPE_TEXTBOX,
 				'multilingual' => 0,
-				'desc' => gettext_th('Number of random pictures to use for the homepage slider.', $me)),
-			gettext_th('Use infinite scroll', $me) => array(
+				'desc' => i18n::gettext_th('Number of random pictures to use for the homepage slider.', $me)),
+			i18n::gettext_th('Use infinite scroll', $me) => array(
 				'order' => 5,
 				'key' => 'zpB_infinitescroll',
 				'type' => OPTION_TYPE_CHECKBOX_ARRAY,
@@ -114,58 +114,58 @@ class ThemeOptions {
 					gettext('Albums') => 'zpB_use_infinitescroll_albums',
 					gettext('News') => 'zpB_use_infinitescroll_news'),
 				'desc' =>
-					gettext_th('Check pages which use <a href="https://infinite-scroll.com/" target="_blank">infinite-scroll jQuery plugin</a>. This layout will automatically load items of next page (albums, images or news) without pagination.', $me) . '<br />' .
-					gettext_th('The behavior is "manual first": it requires visitor to click a button the first time to load new items and then, it automatically load after.', $me) . '<br />' .
-					gettext_th('Rather than using infinite-scroll layout for all albums, you may also allow "multiple_layouts" plugin and then choose "album_infinitescroll" as layout for specific albums of your gallery.', $me) .
-					'<p class="notebox">' . gettext_th('<strong>Note:</strong> This album layout does not manage albums with images and sub-albums (in that case, standard album layout is automatically used).', $me) . '</p>'),
-			gettext_th('Use isotope', $me) => array(
+					i18n::gettext_th('Check pages which use <a href="https://infinite-scroll.com/" target="_blank">infinite-scroll jQuery plugin</a>. This layout will automatically load items of next page (albums, images or news) without pagination.', $me) . '<br />' .
+					i18n::gettext_th('The behavior is "manual first": it requires visitor to click a button the first time to load new items and then, it automatically load after.', $me) . '<br />' .
+					i18n::gettext_th('Rather than using infinite-scroll layout for all albums, you may also allow "multiple_layouts" plugin and then choose "album_infinitescroll" as layout for specific albums of your gallery.', $me) .
+					'<p class="notebox">' . i18n::gettext_th('<strong>Note:</strong> This album layout does not manage albums with images and sub-albums (in that case, standard album layout is automatically used).', $me) . '</p>'),
+			i18n::gettext_th('Use isotope', $me) => array(
 				'order' => 6,
 				'key' => 'zpB_use_isotope',
 				'type' => OPTION_TYPE_CHECKBOX,
 				'desc' =>
-					gettext_th('Use <a href="https://isotope.metafizzy.co/" target="_blank">isotope jQuery plugin</a> for albums pages. This layout allows to display uncropped thumbnails and to filter them based on their tags.', $me) . '<br />' .
-					gettext_th('Rather than use isotope layout for all albums, you may also allow "multiple_layouts" plugin and then choice "album_isotope" as layout for specific albums of your gallery.', $me) .
+					i18n::gettext_th('Use <a href="https://isotope.metafizzy.co/" target="_blank">isotope jQuery plugin</a> for albums pages. This layout allows to display uncropped thumbnails and to filter them based on their tags.', $me) . '<br />' .
+					i18n::gettext_th('Rather than use isotope layout for all albums, you may also allow "multiple_layouts" plugin and then choice "album_isotope" as layout for specific albums of your gallery.', $me) .
 					'<p class="notebox">' .
-						gettext_th('<strong>Note:</strong> This album layout does not manage sub-albums (in that case, only pictures of the album are shown and you cant not access on sub-albums).', $me) . '<br />' .
-						gettext_th('This option overwrites the infinite scroll on album option above.', $me) .
+						i18n::gettext_th('<strong>Note:</strong> This album layout does not manage sub-albums (in that case, only pictures of the album are shown and you cant not access on sub-albums).', $me) . '<br />' .
+						i18n::gettext_th('This option overwrites the infinite scroll on album option above.', $me) .
 					'</p>'),
-			gettext_th('Social Links', $me) => array(
+			i18n::gettext_th('Social Links', $me) => array(
 				'order' => 8,
 				'key' => 'zpB_social_links',
 				'type' => OPTION_TYPE_CHECKBOX,
-				'desc' => gettext_th('Check to show some social links.', $me)),
+				'desc' => i18n::gettext_th('Check to show some social links.', $me)),
 			gettext('Allow search') => array(
 				'order' => 10,
 				'key' => 'zpB_allow_search',
 				'type' => OPTION_TYPE_CHECKBOX,
 				'desc' => gettext('Check to enable search form.')),
-			gettext_th('Excerpt length', $me) => array(
+			i18n::gettext_th('Excerpt length', $me) => array(
 				'order' => 11,
 				'key' => 'zpB_exerpt_length',
 				'type' => OPTION_TYPE_TEXTBOX,
-				'desc' => gettext_th('Excerpt length for news and pages lists in search page', $me)),
+				'desc' => i18n::gettext_th('Excerpt length for news and pages lists in search page', $me)),
 			gettext('Archive View') => array(
 				'order' => 12,
 				'key' => 'zpB_show_archive',
 				'type' => OPTION_TYPE_CHECKBOX,
-				'desc' => gettext_th('Display a link to the Archive list.', $me)),
+				'desc' => i18n::gettext_th('Display a link to the Archive list.', $me)),
 			gettext('Tags') => array(
 				'order' => 14,
 				'key' => 'zpB_show_tags',
 				'type' => OPTION_TYPE_CHECKBOX,
-				'desc' => gettext_th('Check to show a tag cloud in Archive list, with all the tags of the gallery.', $me)),
+				'desc' => i18n::gettext_th('Check to show a tag cloud in Archive list, with all the tags of the gallery.', $me)),
 			gettext('Exif') => array(
 				'order' => 16,
 				'key' => 'zpB_show_exif',
 				'type' => OPTION_TYPE_CHECKBOX,
-				'desc' => gettext_th('Show the EXIFs Data on Image page. Remember you have to check EXIFs data you want to show on Options>Image>Metadata.', $me)),
+				'desc' => i18n::gettext_th('Show the EXIFs Data on Image page. Remember you have to check EXIFs data you want to show on Options>Image>Metadata.', $me)),
 			gettext('Use custom menu') => array(
 				'order' => 4.5,
 				'key' => 'zpB_custom_menu',
 				'type' => OPTION_TYPE_CHECKBOX,
 				'desc' =>
-					gettext_th('Check this if you want to use the "menu_manager" plugin if enabled to use a custom menu instead of the standard one.', $me) .
-					'<p class="notebox">' . gettext_th('<strong>Note:</strong> A custom menu named "zpBootstrap" is used automatically. You can change this custom menu in "menu" tab.', $me) . '</p>'),
+					i18n::gettext_th('Check this if you want to use the "menu_manager" plugin if enabled to use a custom menu instead of the standard one.', $me) .
+					'<p class="notebox">' . i18n::gettext_th('<strong>Note:</strong> A custom menu named "zpBootstrap" is used automatically. You can change this custom menu in "menu" tab.', $me) . '</p>'),
 		);
 	}
 
