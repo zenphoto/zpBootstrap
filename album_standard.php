@@ -20,7 +20,7 @@
 		<?php
 		printPageListWithNav('«', '»', false, true, 'pagination pagination-sm', NULL, true, 7);
 
-		if (isAlbumPage()) {
+		if (hasAlbums()) {
 			include('inc_print_album_thumb.php');
 		}
 		if (isImagePage()) {

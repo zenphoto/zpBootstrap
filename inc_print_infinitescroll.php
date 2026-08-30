@@ -1,5 +1,5 @@
 		<?php
-		if (isAlbumPage()) {
+		if (hasAlbums()) {
 			$containerClass = '.album-wrap';
 			$itemClass = '.album-thumb';
 			$viewMoreText = i18n::gettext_th('View more albums');
