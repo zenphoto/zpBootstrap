@@ -26,7 +26,7 @@ if ((getNumAlbums() > 0) && (getNumImages() > 0)) {
 		if (hasAlbums()) {
 			include('inc_print_album_thumb.php');
 		}
-		if (isImagePage()) {
+		if (getNumImages()) {
 			include('inc_print_image_thumb.php');
 		}
 

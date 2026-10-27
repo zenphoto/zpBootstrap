@@ -4,7 +4,7 @@
 			$itemClass = '.album-thumb';
 			$viewMoreText = i18n::gettext_th('View more albums');
 			$noMoreText = i18n::gettext_th('No more albums to display');
-		} else if (isImagePage()) {
+		} else if (getNumImages()) {
 			$containerClass = '.image-wrap';
 			$itemClass = '.image-thumb';
 			$viewMoreText = i18n::gettext_th('View more images');
